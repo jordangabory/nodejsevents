@@ -1,0 +1,15 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/event" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{event._id}}">
+    <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" class="form-control" name="fullName" placeholder="Full Name" value="{{event.fullName}}">
+        <div class="text-danger">
+            {{event.fullNameError}}</div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/event/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>
